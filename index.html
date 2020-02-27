@@ -76,7 +76,7 @@
 			</tr>
 			<tr>
 				<td class='tool'><label for='key'>Key</label></td>
-				<td class='tool'><input id='key' type='text' value='133457799BBCDFF1' oninput='computeDES()'/></td>
+				<td class='tool'><input id='key' type='text' value='0123456789ABCDEF' oninput='computeDES()'/></td>
 			</tr>
 			<tr>
 				<td colspan='2' style='border-radius: 20px; overflow: hidden'>
@@ -642,10 +642,6 @@
 				let i;
 				for(i of permute) output += s[i - 1];
 				return output;
-			}
-
-			let f = (a, b) => {
-				return a;
 			}
 
 			
