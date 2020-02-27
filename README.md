@@ -8,4 +8,4 @@ Simply type a hexadecimal value into one of the input boxes, and the output will
 ![](/diagram.png)
 
 This application is published to the following URL
-http://simewu.com/des-calculator.
+http://simewu.com/des.
