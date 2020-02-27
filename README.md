@@ -1,5 +1,5 @@
 # DES Calculator
-Data Encryption Standard (DES) is the most widely used block cipher in the world. It encrypts 64-bit data using a 56-bit key.
+Data Encryption Standard (DES) is the most widely used block cipher in the world. It encrypts 64-bit data using a 64-bit key.
 
 ![](/diagram.png)
 
