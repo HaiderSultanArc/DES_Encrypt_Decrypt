@@ -10,4 +10,4 @@ Simply type a hexadecimal value into one of the input boxes, and the output will
 ![](/screenshot.png)
 
 This application is published to the following URL
-http://simewu.com/des.
+https://simewu.com/des.
