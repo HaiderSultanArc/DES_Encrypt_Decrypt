@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<script>
+	for(var a = 0; a < 26; a++) {
+		for(var b = 0; b < 26; b++) {
+			if((a * 4 + b) % 26 == 1 && (a * 19 + b) % 26 == 20) {
+				document.writeln("a = " + a + " and b = " + b);
+			}
+		}
+	}
+</script>
+</html>
