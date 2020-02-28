@@ -176,7 +176,7 @@
 
 			/* Step 1 */
 			if(step++ == numSteps) return html;
-			html += '<hr><h3><span class="step">Step 1:</span> Convert to binary</h3>';
+			html += '<br><h3><span class="step">Step 1:</span> Convert to binary</h3>';
 
 			let base2 = {
 				'0': '0000',
@@ -207,7 +207,7 @@
 
 			/* Step 2 */
 			if(step++ == numSteps) return html;
-			html += '<hr><h3><span class="step">Step 2:</span> Permute the key through the PC-1 table</h3>';
+			html += '<br><h3><span class="step">Step 2:</span> Permute the key through the PC-1 table</h3>';
 
 			html += 'Shuffle bits according to PC-1:<br><br>';
 
@@ -245,7 +245,7 @@
 
 			/* Step 3 */
 			if(step++ == numSteps) return html;
-			html += '<hr><h3><span class="step">Step 3:</span> Rotating each half</h3>Split the key in half, then left rotate each according to the table:<br><br>';
+			html += '<br><h3><span class="step">Step 3:</span> Rotating each half</h3>Split the key in half, then left rotate each according to the table:<br><br>';
 
 			let rotationTable = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1];
 
@@ -279,7 +279,7 @@
 
 			/* Step 4 */
 			if(step++ == numSteps) return html;
-			html += '<hr><h3><span class="step">Step 4:</span> Concatenation</h3><br>';
+			html += '<br><h3><span class="step">Step 4:</span> Concatenation</h3><br>';
 			html += 'Concatenate C and D:';
 			let CD = [];
 			for(let i = 0; i < 17; i++) {
@@ -293,7 +293,7 @@
 
 			/* Step 5 */
 			if(step++ == numSteps) return html;
-			html += '<hr><h3><span class="step">Step 5:</span> Permute the key through the PC-2 table</h3><br>';
+			html += '<br><h3><span class="step">Step 5:</span> Permute the key through the PC-2 table</h3><br>';
 
 			html += 'Shuffle bits according to PC-2 (48-bit):<br><br>';
 
@@ -336,7 +336,7 @@
 
 			/* Step 6 */
 			if(step++ == numSteps) return html;
-			html += '<hr><h3><span class="step">Step 6:</span> Permute the message through IP</h3><br>';
+			html += '<br><h3><span class="step">Step 6:</span> Permute the message through IP</h3><br>';
 			html += 'Shuffle bits according to the initial permutation (IP):<br><br>';
 
 			const initialPermutation = [
@@ -378,7 +378,7 @@
 
 			/* Step 7 */
 			if(step++ == numSteps) return html;
-			html += '<hr><h3><span class="step">Step 7:</span> Encode the data</h3><br>';
+			html += '<br><h3><span class="step">Step 7:</span> Encode the data</h3><br>';
 			html += 'Splitting the resulting message into two halves:<br>';
 
 			html += '<br>L<sub>0</sub> = ' + formatBinary(L[0]);
@@ -671,7 +671,7 @@
 
 				/* Step i */
 				if(step++ == numSteps) return html;
-				html += '<hr><h3><span class="step">Step ' + step + ':</span> Computing ROUND ' + (i + 1) + '</h3>';
+				html += '<br><h3><span class="step">Step ' + step + ':</span> Computing ROUND ' + (i + 1) + '</h3>';
 
 				let KXORER = xor(K[i + 1], E(R[i]));
 				let KXORERS = S(KXORER);
@@ -700,7 +700,7 @@
 
 			/* Step 24 */
 			if(step++ == numSteps) return html;
-			html += '<hr><h3><span class="step">Step 24:</span> Permute the encoded data through the IP<sup>-1</sup> table</h3><br>';
+			html += '<br><h3><span class="step">Step 24:</span> Permute the encoded data through the IP<sup>-1</sup> table</h3><br>';
 
 			html += 'Now that we have'
 			html += '<br><br>L<sub>16</sub> = ' + 'R<sub>15</sub> = ' + formatBinary(L[16]);
@@ -748,7 +748,7 @@
 
 			/* Step 25 */
 			if(step++ == numSteps) return html;
-			html += '<hr><h3><span class="step">Step 25:</span> Convert back into hexadecimal</h3><br><br>';
+			html += '<br><h3><span class="step">Step 25:</span> Convert back into hexadecimal</h3><br><br>';
 
 			base2 = {
 				'0000': '0',
