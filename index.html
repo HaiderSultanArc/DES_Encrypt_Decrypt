@@ -673,7 +673,8 @@
 				if(step++ == numSteps) return html;
 				html += '<br><h3><span class="step">Step ' + step + ':</span> Computing ROUND ' + (i + 1) + '</h3>';
 
-				let KXORER = xor(K[i + 1], E(R[i]));
+				let ER = E(R[i]);
+				let KXORER = xor(K[i + 1], ER);
 				let KXORERS = S(KXORER);
 				let KXORERSP = P(KXORERS);
 
@@ -684,6 +685,7 @@
 				html += '<br>R<sub>' + i + '</sub> = ' + formatBinary(R[i]);
 				html += '<br>K<sub>' + (i + 1) + '</sub> = ' + formatBinary(K[i + 1]) + '<br><br>';
 
+				html += '<i>E</i>(R<sub>' + i + '</sub>) = ' + formatBinary(ER);
 				html += 'K<sub>' + (i + 1) + '</sub> ⊕ <i>E</i>(R<sub>' + i + '</sub>) = ' + formatBinary(KXORER);
 
 				html += '<br><i>S</i>(K<sub>' + (i + 1) + '</sub> ⊕ <i>E</i>(R<sub>' + i + '</sub>)) = ' + formatBinary(KXORERS);
